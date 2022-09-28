@@ -1,11 +1,11 @@
 
 import './App.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      hello
-    </div>
+    <>
+    <div className='text-3xl'>React CRUD Operations using Hooks and Axios</div>
+    </>
   );
 }
 
