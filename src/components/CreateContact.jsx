@@ -1,17 +1,43 @@
 // import { Form } from "semantic-ui-react";
 import React, { useState } from "react";
+import axios from "axios";
 const CreateContact = () => {
     const [contactname, setContactname] = useState("");
     const [ email, setEmail] = useState("");
     const [job, setJob] = useState("");
     const [phone, setPhone ] = useState("");
 
-    const postData = () => {
-        console.log(contactname);
-        console.log(email);
-        console.log(job);
-        console.log(phone);
+    // const postData = (event) => {
+    //     event.preventDefault();
+    //     console.log(contactname);
+    //     console.log(email);
+    //     console.log(job);
+    //     console.log(phone);
+    //     setContactname("");
+    //     setEmail("");
+    //     setJob("");
+    //     setPhone("")
+    // }
+    const postData = (event) => {
+        event.preventDefault();
+        axios.post(`https://6304e96294b8c58fd7280ac4.mockapi.io/fakeData`, {
+            name: contactname,
+            email: email,
+            job: job,
+            phone: phone
+        })
+        console.log("first")
     }
+    // axios.post('/user', {
+    //     firstName: 'Fred',
+    //     lastName: 'Flintstone'
+    //   })
+    //   .then(function (response) {
+    //     console.log(response);
+    //   })
+    //   .catch(function (error) {
+    //     console.log(error);
+    //   });
 
   return (
     <>
