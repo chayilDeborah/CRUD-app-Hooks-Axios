@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import CreateContact from "./components/CreateContact";
+import ReadContact from "./components/ReadContact";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
           </div>
           <Routes>
           <Route exact path="/create" element={<CreateContact />}/>
+          <Route exact path="/read" element={<ReadContact />} />
           </Routes>
         </div>
       </Router>
