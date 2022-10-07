@@ -101,7 +101,7 @@ const CreateContact = () => {
             />
           </label>
         </div>
-        <button className="btn btn-accent mt-7 px-10 py-3 bg-teal-500 text-black" type='submit' onClick={postData}>ADD</button>
+        <button className="btn btn-accent mt-7 px-10 py-3 bg-slate-800 text-white hover:to-blue-800" type='submit' onClick={postData}>ADD</button>
         </form>
       </div>
     </>
